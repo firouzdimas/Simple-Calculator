@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kalkulator Standar | Website Kalkulator</title>
+
+  <!-- Optimize SOE -->
+  <meta name="robots" content="index, follow" />
+  <meta name="aplication-name" content="Website Kalkulator" />
+  <meta name="keywords" content="kalkulator, perhitungan" />
+  <meta name="author" content="Agven Muharis Rifqi" />
+  <meta name="description"
+    content="Website Kalkulator membantu anda dalam menghitung sehari-hariAlat untuk menghitung penjumlahan, pengurangan, perkalian, pembagian dan rumus matematika tertentu. Website Kalkulator dapat membantu anda dalam menghitung sehari-hari." />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Kalkulator Standar | Website Kalkulator" />
+  <meta property="og:description"
+    content="Website Kalkulator membantu anda dalam menghitung sehari-hariAlat untuk menghitung penjumlahan, pengurangan, perkalian, pembagian dan rumus matematika tertentu.Website Kalkulator dapat membantu anda dalam menghitung sehari-hari." />
+  <meta property="og:url" content="https://agvenmuharisrifqi.github.io/Calculator/" />
+  <meta property="og:site_name" content="Website Calculator" />
+  <meta property="article:modified_time" content="2022-03-30T19:03:30.753Z" />
+  <meta property="og:image" content="img/icon/Common_Favicon_Lg.png" />
+  <meta property="og:image:width" content="192" />
+  <meta property="og:image:height" content="192" />
+  <meta property="og:image:type" content="image/png" />
+
+  <!-- Favicon -->
+  <link rel="icon" href="img/icon/Common_Favicon_Sm.png" sizes="32x32">
+  <link rel="icon" href="img/icon/Common_Favicon_Lg.png" sizes="192x192">
+  <link rel="apple-touch-icon" href="img/icon/Apple_Favicon.png">
+
+  <!-- Vendor Website -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Lobster&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+
+  <!-- Style Website -->
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="responsive.css" />
+
+</head>
+
+<body onload="windowWidth();" onresize="windowWidth();">
+
+  <nav id="navbar" class="navbar">
+    <div class="container">
+      <div class="navbar__toggle__wrapper">
+        <div class="navbar__toggle" id="navbar-toggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <a class="navbar__brand" href="#standard">
+          <h1 id="navbar-brand-large">Website Kalkulator</h1>
+          <h1 id="navbar-brand-small">W K</h1>
+        </a>
+      </div>
+      <ul id="navbar-list" class="navbar__list">
+        <li class="navbar__item active">
+          <a href="#standard">
+            <i class="fa-solid fa-calculator"></i>
+            <span>Standard</span>
+          </a>
+        </li>
+        <li class="navbar__item">
+          <a href="#bmi">
+            <i class="fa-solid fa-weight-scale"></i>
+            <span>BMI</span>
+          </a>
+        </li>
+        <li class="navbar__item">
+          <a href="#temperature">
+            <i class="fa-solid fa-temperature-full"></i>
+            <span>Temperature</span>
+          </a>
+        </li>
+      </ul>
+      <p class="navbar__footer">
+        Create by <a href="https://github.com/firouzdimas" rel="nofollow" target="_blank">Firouz Dimas Sadewo</a>
+      </p>
+    </div>
+
+  </nav>
+
+  <main id="main-content" class="main__content">
+    <section class="content__item calculator__content active">
+      <div class="calculator__wrapper">
+        <div class="history__button" title="History" id="button-history">
+          <i class="fa-solid fa-clock-rotate-left"></i>
+        </div>
+        <div class="input__wrapper">
+          <div class="result__wrapper">
+            <h2 class="result">=</h2>
+            <h2 id="result" class="result">0</h2>
+          </div>
+          <input type="text" class="number" name="number" id="number" maxlength="20" onblur="this.focus();">
+        </div>
+        <div class="button__wrapper">
+          <p id="memory-clear" class="button__persegi button__function">MC</p>
+          <p id="delete-all" class="button__persegi panjang button__function">AC</p>
+          <p id="back-space" class="button__persegi panjang button__function">
+            <i class="fa-solid fa-delete-left"></i>
+          </p>
+        </div>
+        <div class="button__wrapper">
+          <p class="button__persegi button__function button__advance" data-adv="+/-">
+            <i class="fa-solid fa-plus-minus"></i>
+          </p>
+          <p class="button__persegi button__normal">1</p>
+          <p class="button__persegi button__normal">2</p>
+          <p class="button__persegi button__normal">3</p>
+          <p class="button__persegi button__function button__calculation" data-btn="÷">
+            <i class="fa-solid fa-divide"></i>
+          </p>
+        </div>
+        <div class="button__wrapper">
+          <p class="button__persegi button__function button__advance" data-adv="√x">
+            <i class="fa-solid fa-square-root-variable"></i>
+          </p>
+          <p class="button__persegi button__normal">4</p>
+          <p class="button__persegi button__normal">5</p>
+          <p class="button__persegi button__normal">6</p>
+          <p class="button__persegi button__function button__calculation" data-btn="*">
+            <i class="fa-solid fa-xmark"></i>
+          </p>
+        </div>
+        <div class="button__wrapper">
+          <p class="button__persegi button__function button__advance" data-adv="%">
+            <i class="fa-solid fa-percent"></i>
+          </p>
+          <p class="button__persegi button__normal">7</p>
+          <p class="button__persegi button__normal">8</p>
+          <p class="button__persegi button__normal">9</p>
+          <p class="button__persegi button__function button__calculation" data-btn="-">
+            <i class="fa-solid fa-minus"></i>
+          </p>
+        </div>
+        <div class="button__wrapper">
+          <p id="button-result" class="button__persegi panjang button__function">
+            <i class="fa-solid fa-equals"></i>
+          </p>
+          <p class="button__persegi button__normal">0</p>
+          <p class="button__persegi button__normal">.</p>
+          <p class="button__persegi button__function button__calculation" data-btn="+">
+            <i class="fa-solid fa-plus"></i>
+          </p>
+        </div>
+        <div id="calculator-history" class="history__calculator">
+          <p id="blank-history" class="history__blank">
+            Hitungan dan hasil Anda akan ditampilkan disini, Anda dapat menggunakan hasil tersebut kembali.
+          </p>
+        </div>
+      </div>
+      <ul class="bg-bubbles">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
+    </section>
+    <section class="content__item bmi__content">
+      <div class="bmi__wrapper">
+        <div class="bmi__input">
+          <label for="height-man">Height</label>
+          <div>
+            <input class="bmi__item__input" type="text" name="height-man" id="height-man">
+            <select class="bmi__item__select" name="select-height" id="select-height">
+              <option value="centimeter" selected>Centimeter</option>
+              <option value="meter">Meter</option>
+              <option value="inch">Inch</option>
+              <option value="foot">Foot</option>
+            </select>
+          </div>
+        </div>
+        <div class="bmi__input">
+          <label for="weight-man">Weight</label>
+          <div>
+            <input class="bmi__item__input" type="text" name="weight-man" id="weight-man">
+            <select class="bmi__item__select" name="select-weight" id="select-weight">
+              <option value="kilogram" selected>Kilogram</option>
+              <option value="pon">Pon</option>
+            </select>
+          </div>
+        </div>
+        <hr class="divider">
+        <p id="bmi-button" class="button__persegi">GO</p>
+      </div>
+      <div id="bmi-info" class="bmi__info">
+        <i id="button-close-info" class="btn__close fa-solid fa-x"></i>
+        <h5>Your Weight Is</h5>
+        <h2 id="bmi-status">Normal</h2>
+        <div class="info__status">
+          <div class="status__wrapper">
+            <div class="icon__status__wrapper">
+              <i class="fa-solid fa-person-circle-minus"></i>
+            </div>
+            <h4>Underweight</h4>
+            <div style="background-color: rgb(0, 225, 255);" class="status__bar"></div>
+          </div>
+          <div class="status__wrapper">
+            <div class="icon__status__wrapper">
+              <i class="fa-solid fa-person-circle-check"></i>
+            </div>
+            <h4>Normal</h4>
+            <div style="background-color: rgb(0, 255, 106);" class="status__bar"></div>
+          </div>
+          <div class="status__wrapper">
+            <div class="icon__status__wrapper">
+              <i class="fa-solid fa-person-circle-plus"></i>
+            </div>
+            <h4>Overweight</h4>
+            <div style="background-color: rgb(255, 166, 0);" class="status__bar"></div>
+          </div>
+          <div class="status__wrapper">
+            <div class="icon__status__wrapper">
+              <i class="fa-solid fa-person-circle-exclamation"></i>
+            </div>
+            <h4>Obesity</h4>
+            <div style="background-color: rgb(255, 0, 0);" class="status__bar"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="content__item temperature__content">
+      <div class="temperature__wrapper">
+        <div class="temperature__input">
+          <label for="temperature-one" label-point>Celcius</label>
+          <div>
+            <input class="temperature__item__input" type="text" name="temperature-one" id="temperature-one" value="0"
+              temp-point>
+            <select class="temperature__item__select" name="select-temperature" id="select-temperature" label-temp>
+              <option value="celcius" selected>Celcius °C</option>
+              <option value="fahrenheit">Fahrenheit °F</option>
+              <option value="kelvin">Kelvin K</option>
+            </select>
+          </div>
+        </div>
+        <div class="temperature__input">
+          <label for="temperature-one" label-point>Fahrenheit</label>
+          <div>
+            <input class="temperature__item__input" type="text" name="temperature-one" id="temperature-one" value="32"
+              temp-point>
+            <select class="temperature__item__select" name="select-temperature" id="select-temperature" label-temp>
+              <option value="celcius">Celcius °C</option>
+              <option value="fahrenheit" selected>Fahrenheit °F</option>
+              <option value="kelvin">Kelvin K</option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Script Website -->
+  <script src="script.js"></script>
+  <script src="kalkulator.js"></script>
+  <script src="bmi.js"></script>
+  <script src="suhu.js"></script>
+  <!-- Script Font Awesome -->
+  <script src="https://kit.fontawesome.com/69f952805c.js" crossorigin="anonymous"></script>
+</body>
+
+</html>
