@@ -22,3 +22,4 @@ Kalkulator BMI dapat mengukur kelangsingan atau kegemukan seseorang berdasarkan 
  - Memasukan Berat badan beserta Satuannya
  - Tekan GO untuk melihat BMI anda.
 
+Link for the website https://simplecalculatorbydimas.netlify.app/
